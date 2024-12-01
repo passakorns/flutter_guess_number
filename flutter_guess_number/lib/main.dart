@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_guess_number/guess_num.dart';
+//import 'package:flutter_guess_number/guess_number.dart';
+//import 'package:flutter_guess_number/guess_number.dart';
 
 void main() {
   runApp(const MainApp());
@@ -9,12 +12,13 @@ class MainApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
-      home: Scaffold(
-        body: Center(
-          child: Text('Hello World!'),
-        ),
-      ),
-    );
+    return  MaterialApp(
+      debugShowCheckedModeBanner: false,
+      title: 'Random Demo',
+      theme: ThemeData(
+          colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
+          useMaterial3: true,),
+      home: const GuessNum(),
+        );
   }
-}
+  }
